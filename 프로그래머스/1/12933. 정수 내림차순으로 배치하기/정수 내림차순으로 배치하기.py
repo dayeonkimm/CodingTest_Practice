@@ -18,3 +18,11 @@ def solution(n):
                     k += 1
     answer = int("".join(new_list))
     return answer
+
+
+
+def solution_2(n):
+    num_list = list(str(n))
+    num_list.sort(reverse = True)
+    answer = int("".join(num_list))
+    return answer
