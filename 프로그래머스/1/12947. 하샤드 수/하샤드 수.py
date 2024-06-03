@@ -8,3 +8,7 @@ def solution(x):
     else:
         answer = False
     return answer
+
+
+
+# return n%sum(int(x) for x in str(n)) == 0
