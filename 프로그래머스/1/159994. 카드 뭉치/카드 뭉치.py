@@ -1,15 +1,9 @@
 def solution(cards1, cards2, goal):
-    i = 0
-    j = 0
     for word in goal:
-        if word == cards1[i]:
-            i += 1
-            if i == len(cards1):
-                i =0
-        elif word == cards2[j]:
-            j += 1
-            if j == len(cards2):
-                j =0
+        if len(cards1) > 0 and word == cards1[0]:
+            del cards1[0]
+        elif len(cards2) > 0 and word == cards2[0]:
+            del cards2[0]
         else:
             return "No"
     return "Yes"
