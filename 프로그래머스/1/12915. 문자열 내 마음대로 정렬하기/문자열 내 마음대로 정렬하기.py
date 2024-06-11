@@ -1,12 +1,10 @@
 def solution(strings, n): 
-    
-    for i in range(len(strings)):
-        strings[i] = strings[i][n]+strings[i]
-    
-    strings.sort()
-    
-    for j in range(len(strings)):
-        strings[j] = strings[j][1:]
-        
-    return strings
+    answer = []
+    answer2 = []
+    for str in strings:
+        answer.append(str[n]+str)
+    answer.sort()
+    for str in answer:
+        answer2.append(str[1:])
+    return answer2
 
