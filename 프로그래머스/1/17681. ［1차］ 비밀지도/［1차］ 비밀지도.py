@@ -20,17 +20,17 @@ def solution(n, arr1, arr2):
     
     origin = []
     for i in range(n):
-        origin.append(list(str(int(new_arr1[i])+int(new_arr2[i]))))
-
+        origin.append((int(new_arr1[i])+int(new_arr2[i])))
+    
+    print(origin)
     
     answer = []
             
     for i in origin:
         answer_part = ""
-        if len(i)<n:
-            for k in range(n-len(i)):
-                answer_part += " "
-        for j in i:
+        if len(str(i))<n:
+            answer_part += " " * (n-len(str(i)))
+        for j in str(i):
             if int(j) == 0:
                 answer_part += " "
             else:
