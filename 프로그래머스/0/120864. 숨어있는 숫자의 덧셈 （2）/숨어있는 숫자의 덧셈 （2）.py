@@ -5,9 +5,7 @@ def solution(my_string):
         if i.isdigit():
             num += i
         else:
-            if num != "":
-                answer += int(num)
-                num = ""
-    if num != "":
-        answer += int(num)
+            num += " "
+    for j in num.split():
+        answer += int(j)
     return answer
