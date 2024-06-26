@@ -1,0 +1,10 @@
+def solution(a, b):
+    if a%2 != 0 and b%2 != 0:
+        answer = a**2 + b**2
+    elif a%2 == 0 and b%2 == 0:
+        answer = a-b
+        if answer<0:
+            answer = -answer
+    else:
+        answer = 2*(a+b)
+    return answer
