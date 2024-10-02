@@ -5,6 +5,5 @@ def solution(arr):
         return [2]
     else:
         a = arr.index(2)
-        rearr = arr[::-1]
-        b = rearr.index(2)
+        b = arr[::-1].index(2)
         return arr[a:len(arr)-b]
